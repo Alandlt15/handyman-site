@@ -10,8 +10,8 @@ import Footer from "./ui/footer";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.className}>
-      <body>
+    <html lang="en" className={'{inter.className} bg-sky-50'}>
+      <body className="min-h-screen bg-sky-50">
         <Navbar />
         {children}
         <Footer />
