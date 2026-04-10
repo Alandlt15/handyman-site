@@ -3,28 +3,31 @@ import NavbarButton from "./navigation-button";
 import NavLinks from "./navigation-links";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="fixed w-full text-white">
-      <nav className="flex flex-row flex justify-between px-6 py-8 bg-sky-700 md:px-30 md:pb-8">
-        <Link href="/" onClick={() => setOpen(false)}>
-          Your Logo
-        </Link>
+      <nav className="flex flex-row justify-between px-6 md:px-40 bg-sky-700 h-26">
+        <div className="overflow-hidden h-21 w-20 self-center md:flex md:items-center md:justify-center">
+          <Link href="/" onClick={() => setOpen(false)}>
+            <img src="/transparent-logo.svg" alt="logo" className="h-20 object-center w-auto bg-white scale-175"/>
+          </Link>
+        </div>
         <NavbarButton open={open} setOpen={setOpen} />
-        <ul className="hidden md:flex flex-row gap-4 text-md pb-2">
-          <li className="block py-1">
+        <ul className="hidden md:flex flex-row gap-4 text-md">
+          <li className="pt-10">
             <Link href="/services">Services</Link>
           </li>
-          <li className="block py-1">
+          <li className="pt-10">
             <Link href="/about">About</Link>
           </li>
-          <li className="block py-1">
+          <li className="pt-10">
             <Link href="/projects">Projects</Link>
           </li>
-          <li className="block">
+          <li className="pt-9">
             <Link href="/book">
               <button
                 type="button"
