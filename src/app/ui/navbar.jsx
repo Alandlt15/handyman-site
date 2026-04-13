@@ -13,7 +13,11 @@ export default function Navbar() {
       <nav className="flex flex-row justify-between px-6 md:px-40 bg-sky-700 h-26">
         <div className="overflow-hidden h-21 w-20 self-center md:flex md:items-center md:justify-center">
           <Link href="/" onClick={() => setOpen(false)}>
-            <img src="/transparent-logo.svg" alt="logo" className="h-20 object-center w-auto bg-white scale-175"/>
+            <img
+              src="/transparent-logo.svg"
+              alt="logo"
+              className="h-20 object-center w-auto bg-white scale-175"
+            />
           </Link>
         </div>
         <NavbarButton open={open} setOpen={setOpen} />
