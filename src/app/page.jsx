@@ -99,9 +99,11 @@ export default function Home() {
           </p>
         </article>
 
-        <article className="md:flex md:flex-row md:text-2xl md:pt-8 justify-center">
+        <article className="md:flex md:flex-row md:text-2xl md:pt-8 md:justify-center">
           <article className="justify-items-center text-center py-4 md:text-wrap md:w-125 md:px-10">
-            <ShieldCheck className="h-20 w-20 md:h-40 md:w-40" />
+  
+              <ShieldCheck className="h-20 w-20 md:h-40 md:w-40" />
+
             <h1 className="font-serif text-2xl text-sky-700 pt-4 md:text-3xl">
               Integrity
             </h1>
